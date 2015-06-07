@@ -9,7 +9,6 @@
 #import "LibChuckObjc.h"
 #import "libchuck.h"
 
-
 @interface LibChuckObjc ()
 
 @property (nonatomic) chuck_inst * instance;
@@ -20,14 +19,14 @@
 @implementation LibChuckObjc
 
 + (instancetype)create:(ChuckOptions)options {
-    LibChuckObjc *chuck_inst = [[LibChuckObjc alloc] init];
+    LibChuckObjc *chuck = [[LibChuckObjc alloc] init];
     chuck_options cOptions;
     cOptions.num_channels = options.numChannels;
     cOptions.sample_rate = options.sampleRate;
     cOptions.buffer_size = options.bufferSize;
     cOptions.slave = options.isSlave;
-    chuck_inst.instance = libchuck_create(&cOptions);
-    return chuck_inst;
+    chuck.instance = libchuck_create(&cOptions);
+    return chuck;
 }
 
 - (void)destroy {
@@ -67,16 +66,16 @@
     return result;
 }
 
-- (ChuckResult)addShred:(NSURL *)filePath code:(NSString *)code {
-    const char *cFilePath = [[filePath path] cStringUsingEncoding:NSUTF8StringEncoding];
+- (ChuckResult)addShred:(NSString *)filePath code:(NSString *)code {
+    const char *cFilePath = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
     const char *cCode = [code cStringUsingEncoding:NSUTF8StringEncoding];
     chuck_result cResult = libchuck_add_shred(_instance, cFilePath, cCode);
     return [LibChuckObjc toChuckResult:cResult];
 }
 
-- (ChuckResult)replaceShred:(NSInteger)shredId pathToShred:(NSURL *)filePath code:(NSString *)code {
+- (ChuckResult)replaceShred:(NSInteger)shredId pathToShred:(NSString *)filePath code:(NSString *)code {
     int cShredId = shredId;
-    const char *cFilePath = [[filePath path] cStringUsingEncoding:NSUTF8StringEncoding];
+    const char *cFilePath = [filePath cStringUsingEncoding:NSUTF8StringEncoding];
     const char *cCode = [code cStringUsingEncoding:NSUTF8StringEncoding];
     chuck_result cResult = libchuck_replace_shred(_instance, cShredId, cFilePath, cCode);
     return [LibChuckObjc toChuckResult:cResult];
