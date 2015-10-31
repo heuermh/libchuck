@@ -44,18 +44,18 @@
 			remoteGlobalIDString = 0946F8561AA85B080045E1C4;
 			remoteInfo = "libchuck-iOS";
 		};
+		0952E0B91BE56679002636CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09A13EAC1AA083EA007DB8D2 /* libchuck.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0946F8091AA85B080045E1C4;
+			remoteInfo = "libchuck-iOS";
+		};
 		09A13EB01AA083EA007DB8D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09A13EAC1AA083EA007DB8D2 /* libchuck.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 09DDF97E1A9C6BB200F72155;
-			remoteInfo = libchuck;
-		};
-		09A13EB21AA083F9007DB8D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09A13EAC1AA083EA007DB8D2 /* libchuck.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 09DDF97D1A9C6BB200F72155;
 			remoteInfo = libchuck;
 		};
 /* End PBXContainerItemProxy section */
@@ -186,8 +186,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				0952E0BA1BE56679002636CE /* PBXTargetDependency */,
 				0946F8021AA8301F0045E1C4 /* PBXTargetDependency */,
-				09A13EB31AA083F9007DB8D2 /* PBXTargetDependency */,
 			);
 			name = "slave-test";
 			productName = LibChucKTest;
@@ -292,10 +292,10 @@
 			name = TheAmazingAudioEngine;
 			targetProxy = 0946F8011AA8301F0045E1C4 /* PBXContainerItemProxy */;
 		};
-		09A13EB31AA083F9007DB8D2 /* PBXTargetDependency */ = {
+		0952E0BA1BE56679002636CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = libchuck;
-			targetProxy = 09A13EB21AA083F9007DB8D2 /* PBXContainerItemProxy */;
+			name = "libchuck-iOS";
+			targetProxy = 0952E0B91BE56679002636CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
