@@ -283,6 +283,11 @@ LIBCHUCK_FUNC_DECL int libchuck_vm_stop(chuck_inst *ck)
 
 LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred(chuck_inst *ck, const char *filepath, const char *code)
 {
+    return libchuck_add_shred_args(ck, filepath, code, NULL, 0);
+}
+
+LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred_args(chuck_inst *ck, const char *filepath, const char *code, const char *argv[], int argc)
+{
     const char *name = path_getLastComponent(filepath);
     FILE *file = NULL;
     
@@ -308,6 +313,8 @@ LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred(chuck_inst *ck, const char *f
         msg->type = MSG_ADD;
         msg->reply = ( ck_msg_func )1;
         msg->args = new vector<string>();
+        for(int i = 0; i < argc; i++)
+            msg->args->push_back(string(argv[i]));
         
         // execute
         ck->m_vm->queue_msg( msg, 1 );
@@ -344,6 +351,11 @@ LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred(chuck_inst *ck, const char *f
 
 LIBCHUCK_FUNC_DECL chuck_result libchuck_replace_shred(chuck_inst *ck, int shred_id, const char *filepath, const char *code)
 {
+    return libchuck_replace_shred_args(ck, shred_id, filepath, code, NULL, 0);
+}
+
+LIBCHUCK_FUNC_DECL chuck_result libchuck_replace_shred_args(chuck_inst *ck, int shred_id, const char *filepath, const char *code, const char *argv[], int argc)
+{
     const char *name = path_getLastComponent(filepath);
     FILE *file = NULL;
     
@@ -370,6 +382,8 @@ LIBCHUCK_FUNC_DECL chuck_result libchuck_replace_shred(chuck_inst *ck, int shred
         msg->param = shred_id;
         msg->reply = ( ck_msg_func )1;
         msg->args = new vector<string>();
+        for(int i = 0; i < argc; i++)
+            msg->args->push_back(string(argv[i]));
         
         // execute
         ck->m_vm->queue_msg( msg, 1 );

@@ -52,7 +52,9 @@ LIBCHUCK_FUNC_DECL int libchuck_vm_start(chuck_inst *);
 LIBCHUCK_FUNC_DECL int libchuck_vm_stop(chuck_inst *);
 
 LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred(chuck_inst *, const char *filepath, const char *code);
+LIBCHUCK_FUNC_DECL chuck_result libchuck_add_shred_args(chuck_inst *, const char *filepath, const char *code, const char *argv[], int argc);
 LIBCHUCK_FUNC_DECL chuck_result libchuck_replace_shred(chuck_inst *, int shred_id, const char *filepath,  const char *code);
+LIBCHUCK_FUNC_DECL chuck_result libchuck_replace_shred_args(chuck_inst *, int shred_id, const char *filepath,  const char *code, const char *argv[], int argc);
 LIBCHUCK_FUNC_DECL chuck_result libchuck_remove_shred(chuck_inst *, int shred_id);
 
 LIBCHUCK_FUNC_DECL int libchuck_slave_process(chuck_inst *, float *input, float *output, int numFrames);
