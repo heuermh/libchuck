@@ -75,7 +75,6 @@
 		0946F84A1AA85B080045E1C4 /* timetag.c in Sources */ = {isa = PBXBuildFile; fileRef = 0948A8B01A9C73370066CCBD /* timetag.c */; settings = {COMPILER_FLAGS = "-DHAVE_CONFIG_H"; }; };
 		0946F84B1AA85B080045E1C4 /* ulib_machine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0948A9A21A9C73380066CCBD /* ulib_machine.cpp */; };
 		0946F84D1AA85B080045E1C4 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A13EB81AA0860A007DB8D2 /* AudioUnit.framework */; };
-		0946F84E1AA85B080045E1C4 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A13EB61AA085BA007DB8D2 /* libc++.dylib */; };
 		0946F84F1AA85B080045E1C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0948AA211A9C76410066CCBD /* AudioToolbox.framework */; };
 		0946F8501AA85B080045E1C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0948AA1F1A9C76380066CCBD /* CoreAudio.framework */; };
 		0946F8521AA85B080045E1C4 /* libchuck.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 09DDF9811A9C6BB200F72155 /* libchuck.h */; };
@@ -338,7 +337,6 @@
 		0948AA1E1A9C73A70066CCBD /* digiio_rtaudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = digiio_rtaudio.h; sourceTree = "<group>"; };
 		0948AA1F1A9C76380066CCBD /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		0948AA211A9C76410066CCBD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		09A13EB61AA085BA007DB8D2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		09A13EB81AA0860A007DB8D2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		09DDF97E1A9C6BB200F72155 /* libchuck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libchuck.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DDF9811A9C6BB200F72155 /* libchuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libchuck.h; sourceTree = "<group>"; };
@@ -351,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0946F84D1AA85B080045E1C4 /* AudioUnit.framework in Frameworks */,
-				0946F84E1AA85B080045E1C4 /* libc++.dylib in Frameworks */,
 				0946F84F1AA85B080045E1C4 /* AudioToolbox.framework in Frameworks */,
 				0946F8501AA85B080045E1C4 /* CoreAudio.framework in Frameworks */,
 			);
@@ -587,7 +584,6 @@
 			isa = PBXGroup;
 			children = (
 				09A13EB81AA0860A007DB8D2 /* AudioUnit.framework */,
-				09A13EB61AA085BA007DB8D2 /* libc++.dylib */,
 				0948AA211A9C76410066CCBD /* AudioToolbox.framework */,
 				0948AA1F1A9C76380066CCBD /* CoreAudio.framework */,
 			);

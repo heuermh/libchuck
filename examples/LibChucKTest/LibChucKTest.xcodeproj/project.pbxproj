@@ -15,7 +15,6 @@
 		090707181AA07FEE00FB08C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090707161AA07FEE00FB08C1 /* LaunchScreen.xib */; };
 		09A13EBD1AA0861F007DB8D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A13EBA1AA0861F007DB8D2 /* AudioToolbox.framework */; };
 		09A13EBF1AA0861F007DB8D2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A13EBC1AA0861F007DB8D2 /* CoreAudio.framework */; };
-		09A13EC11AA08626007DB8D2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A13EC01AA08626007DB8D2 /* libc++.dylib */; };
 		09E57F921AA85CBC000E7D2A /* libchuck-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E57F911AA85CB4000E7D2A /* libchuck-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		09A13EBA1AA0861F007DB8D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		09A13EBB1AA0861F007DB8D2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		09A13EBC1AA0861F007DB8D2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		09A13EC01AA08626007DB8D2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E57F921AA85CBC000E7D2A /* libchuck-iOS.a in Frameworks */,
-				09A13EC11AA08626007DB8D2 /* libc++.dylib in Frameworks */,
 				09A13EBD1AA0861F007DB8D2 /* AudioToolbox.framework in Frameworks */,
 				09A13EBF1AA0861F007DB8D2 /* CoreAudio.framework in Frameworks */,
 			);
@@ -130,7 +127,6 @@
 		09A13EC21AA0871A007DB8D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09A13EC01AA08626007DB8D2 /* libc++.dylib */,
 				09A13EBA1AA0861F007DB8D2 /* AudioToolbox.framework */,
 				09A13EBB1AA0861F007DB8D2 /* AudioUnit.framework */,
 				09A13EBC1AA0861F007DB8D2 /* CoreAudio.framework */,
