@@ -140,9 +140,12 @@ LIBCHUCK_FUNC_DECL int libchuck_vm_start(chuck_inst *ck)
         
         Digitalio::m_init = FALSE;
         
+//        if( !ck->m_vm->initialize( enable_audio, vm_halt, srate, buffer_size,
+//                                   num_buffers, dac, adc, output_channels,
+//                                   input_channels, block, adaptive, force_srate, slave ) )
         if( !ck->m_vm->initialize( enable_audio, vm_halt, srate, buffer_size,
-                                   num_buffers, dac, adc, output_channels,
-                                   input_channels, block, adaptive, force_srate, slave ) )
+                                  num_buffers, dac, adc, output_channels,
+                                  input_channels, block, adaptive, force_srate ) )
         {
             fprintf( stderr, "[chuck]: %s\n", ck->m_vm->last_error() );
             // pop
