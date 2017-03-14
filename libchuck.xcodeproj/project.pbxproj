@@ -865,7 +865,10 @@
 					"$(PROJECT_DIR)/chuck/src/",
 					"$(PROJECT_DIR)/chuck/src/lo",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_MODULE_NAME = chuck;
 				PRODUCT_NAME = "chuck-iOS";
 				SKIP_INSTALL = YES;
@@ -898,7 +901,10 @@
 					"$(PROJECT_DIR)/chuck/src/",
 					"$(PROJECT_DIR)/chuck/src/lo",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_MODULE_NAME = chuck;
 				PRODUCT_NAME = "chuck-iOS";
 				SKIP_INSTALL = YES;
